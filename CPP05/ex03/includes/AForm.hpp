@@ -4,6 +4,11 @@
 #include "Bureaucrat.hpp"
 
 #include <fstream>
+#include <cstdlib>
+#include "AForm.hpp"
+
+class Bureaucrat;
+
 
 class AForm
 {
@@ -17,7 +22,7 @@ class AForm
         AForm();
         AForm(const AForm &copy);
         AForm(std::string name, std::string targer, int grade, int exec_grade);
-        ~AForm();
+        virtual ~AForm();
 
         AForm & operator=(const AForm &assign);
 
@@ -28,7 +33,8 @@ class AForm
         int get_grade() const;
 
         void beSigned(Bureaucrat &buro);
-        void get_exec_grade(Bureaucrat &buro);
+        void get_grade(Bureaucrat &buro);
+        void beExecuted(Bureaucrat &buro);
 
         virtual void executeAction() const = 0;
 

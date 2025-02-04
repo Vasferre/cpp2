@@ -1,7 +1,7 @@
 #include "Bureaucrat.hpp"
 #include "AForm.hpp"
 #include "PresidentialPardonForm.hpp"
-#include "RobotomyRequestForm.hpp"
+#include "RobotmyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
 
 int main()
@@ -14,7 +14,7 @@ int main()
 
 	ShrubberyCreationForm monke("monke");
 	PresidentialPardonForm apps("apps");
-	RobotomyRequestForm primats("primats");
+	RobotmyRequestForm primats("primats");
 
 	zoze.executeForm(monke);
 	zoze.signForm(monke);

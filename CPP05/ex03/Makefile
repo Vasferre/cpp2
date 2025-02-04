@@ -10,7 +10,7 @@ OBJS = ${SRCS:%.cpp=${OBJS_FOLDER}/%.o}
 SRCS =	main.cpp\
 		AForm.cpp\
 		PresidentialPardonForm.cpp\
-		RobotomyRequestForm.cpp\
+		RobotmyRequestForm.cpp\
 		ShrubberyCreationForm.cpp\
 		Bureaucrat.cpp\
 		Intern.cpp

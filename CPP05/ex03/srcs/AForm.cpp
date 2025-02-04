@@ -1,6 +1,6 @@
 #include "AForm.hpp"
 
-AForm::AForm() name("default"), targer("default"), is_signed(false), grade(1), exec_grade(1)
+AForm::AForm(): name("default"), target("default"), is_signed(false), grade(1), exec_grade(1)
 {
 
 }
@@ -13,8 +13,8 @@ AForm::AForm(std::string name, std::string target, int grade, int exec_grade) : 
             throw AForm::GradeTooHighException();
         if (grade > 150 || exec_grade > 150)
             throw AForm::GradeTooLowException();
-        grade = grade;
-        exec_grade = exec_grade;
+        this->grade = grade;
+        this->exec_grade = exec_grade;
         std::cout << "Fields constructor called of AForm" << std::endl;
     }
     catch(const std::exception &e)
@@ -39,7 +39,7 @@ AForm & AForm::operator=(const AForm &assign)
     name = assign.get_name();
     is_signed = assign.get_is_signed();
     grade = assign.get_sign();
-    exec_grade = assign.get_exec_grade();
+    exec_grade = assign.get_grade();
     return *this;
 }
 
@@ -62,12 +62,12 @@ int AForm::get_sign() const
     return grade;
 }
 
-int AForm::get_exec_grade() const
+int AForm::get_grade() const
 {
     return exec_grade;
 }
 
-void AForm::beSigned(Bureacrat &buro)
+void AForm::beSigned(Bureaucrat &buro)
 {
     if(buro.get_grade() > grade)
         throw (AForm::GradeTooLowException());
@@ -89,7 +89,7 @@ void AForm::beExecuted(Bureaucrat &buro)
 
 std::ostream &operator<<(std::ostream &out, AForm const &AForm)
 {
-	return out << "AForm: " << AForm.get_name() << "(name), " << AForm.get_is_signed() << "(is singed), " << AForm.get_sign_grade() << "(signed grade), " << AForm.get_exec_grade() << "(exec grade)." ;
+	return out << "AForm: " << AForm.get_name() << "(name), " << AForm.get_is_signed() << "(is singed), " << AForm.get_sign() << "(signed grade), " << AForm.get_grade() << "(exec grade)." ;
 }
 
 const char * AForm::GradeTooHighException::what() const throw()

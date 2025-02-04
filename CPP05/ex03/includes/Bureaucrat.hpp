@@ -3,8 +3,10 @@
 
 #include <iostream>
 #include <string.h>
+#include "AForm.hpp"
 
-class form;
+
+class AForm;
 
 class Bureaucrat
 {
@@ -14,6 +16,8 @@ class Bureaucrat
     public:
         void inc();
         void dec();
+        void signForm(AForm &form);
+	void executeForm(AForm &form);
 
         Bureaucrat();
         Bureaucrat(const Bureaucrat &copy);

@@ -1,19 +1,19 @@
-include "ShrubberyCreationForm.hpp"
+#include "ShrubberyCreationForm.hpp"
 
 ShrubberyCreationForm::ShrubberyCreationForm() : AForm("shrubbery form", "default", 145, 137)
 {}
 
-ShrubberyCreationForm::ShrubberyCreationForm(string target) : AForm("shrubbery form", target, 145, 137) {}
+ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : AForm("shrubbery form", target, 145, 137) {}
 
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &copy)
 {
 	*this = copy;
-	cout << "\e[0;33mCopy Constructor called of ShrubberyCreationForm\e[0m" << endl;
+	std::cout << "\e[0;33mCopy Constructor called of ShrubberyCreationForm\e[0m" << std::endl;
 }
 
 ShrubberyCreationForm::~ShrubberyCreationForm()
 {
-	cout << "\e[0;31mDestructor called of ShrubberyCreationForm\e[0m" << endl;
+	std::cout << "\e[0;31mDestructor called of ShrubberyCreationForm\e[0m" << std::endl;
 }
 
 ShrubberyCreationForm & ShrubberyCreationForm::operator=(const ShrubberyCreationForm &assign)
@@ -28,34 +28,34 @@ void ShrubberyCreationForm::executeAction() const {
 
 	out.open((this->get_target() + "_shrubbery").c_str(), std::ofstream::in | std::ofstream::trunc);
 
-	out << endl;
-	out << "                                            ." << endl;
-	out << "                                    .         ;  " << endl;
-	out << "       .              .              ;%     ;;   " << endl;
-	out << "         ,           ,                :;%  %;   " << endl;
-	out << "          :         ;                   :;%;'     .,   " << endl;
-	out << " ,.        %;     %;            ;        %;'    ,;" << endl;
-	out << "   ;       ;%;  %%;        ,     %;    ;%;    ,%'" << endl;
-	out << "    %;       %;%;      ,  ;       %;  ;%;   ,%;' " << endl;
-	out << "     ;%;      %;        ;%;        % ;%;  ,%;'" << endl;
-	out << "      `%;.     ;%;     %;'         `;%%;.%;'" << endl;
-	out << "       `:;%.    ;%%. %@;        %; ;@%;%'" << endl;
-	out << "          `:%;.  :;bd%;          %;@%;'" << endl;
-	out << "            `@%:.  :;%.         ;@@%;'   " << endl;
-	out << "              `@%.  `;@%.      ;@@%;         " << endl;
-	out << "                `@%%. `@%%    ;@@%;        " << endl;
-	out << "                  ;@%. :@%%  %@@%;       " << endl;
-	out << "                    %@bd%%%bd%%:;     " << endl;
-	out << "                      #@%%%%%:;;" << endl;
-	out << "                      %@@%%%::;" << endl;
-	out << "                      %@@@%(o);  . '         " << endl;
-	out << "                      %@@@o%;:(.,'         " << endl;
-	out << "                  `.. %@@@o%::;         " << endl;
-	out << "                     `)@@@o%::;         " << endl;
-	out << "                      %@@(o)::;        " << endl;
-	out << "                     .%@@@@%::;         " << endl;
-	out << "                     ;%@@@@%::;.          " << endl;
-	out << "                    ;%@@@@%%:;;;. " << endl;
-	out << "                ...;%@@@@@%%:;;;;,..   " << endl;
+	out << std::endl;
+	out << "                                            ." << std::endl;
+	out << "                                    .         ;  " << std::endl;
+	out << "       .              .              ;%     ;;   " << std::endl;
+	out << "         ,           ,                :;%  %;   " << std::endl;
+	out << "          :         ;                   :;%;'     .,   " << std::endl;
+	out << " ,.        %;     %;            ;        %;'    ,;" << std::endl;
+	out << "   ;       ;%;  %%;        ,     %;    ;%;    ,%'" << std::endl;
+	out << "    %;       %;%;      ,  ;       %;  ;%;   ,%;' " << std::endl;
+	out << "     ;%;      %;        ;%;        % ;%;  ,%;'" << std::endl;
+	out << "      `%;.     ;%;     %;'         `;%%;.%;'" << std::endl;
+	out << "       `:;%.    ;%%. %@;        %; ;@%;%'" << std::endl;
+	out << "          `:%;.  :;bd%;          %;@%;'" << std::endl;
+	out << "            `@%:.  :;%.         ;@@%;'   " << std::endl;
+	out << "              `@%.  `;@%.      ;@@%;         " << std::endl;
+	out << "                `@%%. `@%%    ;@@%;        " << std::endl;
+	out << "                  ;@%. :@%%  %@@%;       " << std::endl;
+	out << "                    %@bd%%%bd%%:;     " << std::endl;
+	out << "                      #@%%%%%:;;" << std::endl;
+	out << "                      %@@%%%::;" << std::endl;
+	out << "                      %@@@%(o);  . '         " << std::endl;
+	out << "                      %@@@o%;:(.,'         " << std::endl;
+	out << "                  `.. %@@@o%::;         " << std::endl;
+	out << "                     `)@@@o%::;         " << std::endl;
+	out << "                      %@@(o)::;        " << std::endl;
+	out << "                     .%@@@@%::;         " << std::endl;
+	out << "                     ;%@@@@%::;.          " << std::endl;
+	out << "                    ;%@@@@%%:;;;. " << std::endl;
+	out << "                ...;%@@@@@%%:;;;;,..   " << std::endl;
 
 }
