@@ -3,31 +3,31 @@
 int main()
 {
 	Bureaucrat andre("Andre", 15);
-	cout << andre << endl;
+	std::cout << andre << std::endl;
 
-	cout << endl;
+	std::cout << std::endl;
 	Bureaucrat xavier("Xavier", 151);
 	Bureaucrat xavier2("Xavier2", 0);
 
-	cout << endl;
+	std::cout << std::endl;
 	Bureaucrat carlos("Carlos", 3);
 	Bureaucrat lituanio("Lituanio", 149);
-	cout << carlos << endl
-		 << lituanio << endl;
-	carlos.increment();
-	lituanio.decrement();
-	cout << carlos << endl
-		 << lituanio << endl;
-	carlos.increment();
-	lituanio.decrement();
-	cout << carlos << endl
-		 << lituanio << endl;
-	carlos.increment();
-	lituanio.decrement();
-	cout << carlos << endl
-		 << lituanio << endl;
+	std::cout << carlos << std::endl
+		 << lituanio << std::endl;
+	carlos.inc();
+	lituanio.dec();
+	std::cout << carlos << std::endl
+		 << lituanio << std::endl;
+	carlos.inc();
+	lituanio.dec();
+	std::cout << carlos << std::endl
+		 << lituanio << std::endl;
+	carlos.inc();
+	lituanio.dec();
+	std::cout << carlos << std::endl
+		 << lituanio << std::endl;
 
-	cout << endl;
+	std::cout << std::endl;
 
 	return 0;
 }

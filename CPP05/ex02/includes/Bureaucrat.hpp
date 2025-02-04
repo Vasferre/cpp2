@@ -4,24 +4,26 @@
 #include <iostream>
 #include <string.h>
 
-class form;
+class AForm;
 
 class Bureaucrat
 {
     private:
-        const string name;
+        const std::string name;
         int grade;
     public:
         void inc();
-        void dec();
+	void dec();
+	void signForm(AForm &form);
+	void executeForm(AForm &form);
 
         Bureaucrat();
         Bureaucrat(const Bureaucrat &copy);
-        Bureaucrat(string name, int grade);
+        Bureaucrat(std::string name, int grade);
         ~Bureaucrat();
         Bureaucrat &operator=(const Bureaucrat &assign);
 
-        string get_name() const;
+        std::string get_name() const;
         int get_grade() const;
 
         class GradeTooHighException : public std::exception

@@ -1,5 +1,5 @@
 #include <ctime>
-#progma once
+#pragma once
 
 #include "AForm.hpp"
 
@@ -9,7 +9,7 @@ class RobotomyRequestForm
     private:
         RobotomyRequestForm();
     public:
-        RobotomyRequestForm(string target);
+        RobotomyRequestForm(std::string target);
         RobotomyRequestForm(const RobotomyRequestForm &copy);
         ~RobotomyRequestForm();
 

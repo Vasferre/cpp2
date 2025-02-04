@@ -5,7 +5,7 @@ AForm::AForm() name("default"), targer("default"), is_signed(false), grade(1), e
 
 }
 
-AForm::AForm(string name, string target, int grade, int exec_grade) : name(name), target(target), is_signed(false)
+AForm::AForm(std::string name, std::string target, int grade, int exec_grade) : name(name), target(target), is_signed(false)
 {
     try
     {
@@ -43,11 +43,11 @@ AForm & AForm::operator=(const AForm &assign)
     return *this;
 }
 
-string AForm::get_name() const
+std::string AForm::get_name() const
 {
     return name;
 }
-string AForm::get_target() const
+std::string AForm::get_target() const
 {
     return target;
 }

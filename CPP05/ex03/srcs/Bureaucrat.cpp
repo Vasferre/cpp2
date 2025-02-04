@@ -5,7 +5,7 @@ Bureaucrat::Bureaucrat(void):name("default"), grade(1)
 
 }
 
-Bureaucrat::Bureaucrat(string name, int grade) : name(name)
+Bureaucrat::Bureaucrat(std::string name, int grade) : name(name)
 {
     try
     {
@@ -66,7 +66,7 @@ Bureaucrat::Bureaucrat(string name, int grade) : name(name)
         }
     }
 
-    string Bureaucrat::get_name() const
+    std::string Bureaucrat::get_name() const
     {
         return name;
     }

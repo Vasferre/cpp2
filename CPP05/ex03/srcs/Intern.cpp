@@ -26,7 +26,7 @@ Intern & Intern::operator=(const Intern &assign)
 	return *this;
 }
 
-AForm *Intern::makeForm(string name, string target)
+AForm *Intern::makeForm(std::string name, std::string target)
 {
 	AForm *new_form = NULL;
 

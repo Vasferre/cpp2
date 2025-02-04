@@ -1,19 +1,13 @@
-NAME = bureaucrat
+NAME = convert
 
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror -Wshadow -Iincludes -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -Wshadow -std=c++98
 OBJS_FOLDER = base
-VPATH = srcs/
 RM = rm -rf
 
 OBJS = ${SRCS:%.cpp=${OBJS_FOLDER}/%.o}
 SRCS =	main.cpp\
-		AForm.cpp\
-		PresidentialPardonForm.cpp\
-		RobotomyRequestForm.cpp\
-		ShrubberyCreationForm.cpp\
-		Bureaucrat.cpp\
-		Intern.cpp
+		ScalarConverter.cpp
 
 ${NAME}: ${OBJS_FOLDER} ${OBJS}
 	${CXX} ${OBJS} -o ${NAME}

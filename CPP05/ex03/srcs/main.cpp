@@ -8,7 +8,7 @@ int main()
 {
 	Bureaucrat zoze("Jose", 150);
 	Bureaucrat jorge("Jorge the executer", 1);
-	cout << endl;
+	std::cout << std::endl;
 
 	// AForm aform("a", "b", 0, 0);
 
@@ -21,23 +21,23 @@ int main()
 	jorge.signForm(monke);
 	zoze.executeForm(monke);
 
-	cout << endl;
+	std::cout << std::endl;
 
 	jorge.signForm(monke);
 	jorge.executeForm(monke);
 
-	cout << endl;
+	std::cout << std::endl;
 
 	jorge.signForm(primats);
 	jorge.executeForm(primats);
 	jorge.executeForm(primats);
 
-	cout << endl;
+	std::cout << std::endl;
 
 	jorge.signForm(apps);
 	jorge.executeForm(apps);
 
-	cout << endl;
+	std::cout << std::endl;
 
 	return 0;
 }

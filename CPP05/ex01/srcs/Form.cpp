@@ -1,11 +1,11 @@
 #include "Form.hpp"
 
-Form::Form() name("default"), is_signed(false), grade(1), exec_grade(1)
+Form::Form() : name("default"), is_signed(false), grade(1), exec_grade(1)
 {
 
 }
 
-Form::Form(string name, int grade, int exec_grade) : name(name), is_signed(false)
+Form::Form(std::string name, int grade, int exec_grade) : name(name), is_signed(false)
 {
     try
     {
@@ -13,8 +13,8 @@ Form::Form(string name, int grade, int exec_grade) : name(name), is_signed(false
             throw Form::GradeTooHighException();
         if (grade > 150 || exec_grade > 150)
             throw Form::GradeTooLowException();
-        grade = grade;
-        exec_grade = exec_grade;
+        this->grade = grade;
+        this->exec_grade = exec_grade;
         std::cout << "Fields constructor called of Form" << std::endl;
     }
     catch(const std::exception &e)
@@ -39,11 +39,11 @@ Form & Form::operator=(const Form &assign)
     name = assign.get_name();
     is_signed = assign.get_is_signed();
     grade = assign.get_sign();
-    exec_grade = assign.get_exec_grade();
+    exec_grade = assign.get_grade();
     return *this;
 }
 
-string Form::get_name() const
+std::string Form::get_name() const
 {
     return name;
 }
@@ -58,12 +58,12 @@ int Form::get_sign() const
     return grade;
 }
 
-int Form::get_exec_grade() const
+int Form::get_grade() const
 {
     return exec_grade;
 }
 
-void Form::beSigned(Bureacrat &buro)
+void Form::beSigned(Bureaucrat &buro)
 {
     if(buro.get_grade() > grade)
         throw (Form::GradeTooLowException());
@@ -76,7 +76,7 @@ void Form::beSigned(Bureacrat &buro)
 
 std::ostream &operator<<(std::ostream &out, Form const &form)
 {
-	return out << "Form: " << form.get_name() << "(name), " << form.get_is_signed() << "(is singed), " << form.get_sign_grade() << "(signed grade), " << form.get_exec_grade() << "(exec grade)." ;
+	return out << "Form: " << form.get_name() << "(name), " << form.get_is_signed() << "(is singed), " << form.get_sign() << "(signed grade), " << form.get_grade() << "(exec grade)." ;
 }
 
 const char * Form::GradeTooHighException::what() const throw()

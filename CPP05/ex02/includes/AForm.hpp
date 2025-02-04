@@ -8,27 +8,29 @@
 class AForm
 {
     private:
-        string name;
-        string target;
+        std::string name;
+        std::string target;
         bool is_signed;
         int grade;
         int exec_grade;
     public:
         AForm();
         AForm(const AForm &copy);
-        AForm(string name, string targer, int grade, int exec_grade);
+        AForm(std::string name, std::string targer, int grade, int exec_grade);
         ~AForm();
 
         AForm & operator=(const AForm &assign);
 
-        string get_name() const;
-        string get_target() const;
+        std::string get_name() const;
+        std::string get_target() const;
         bool get_is_signed() const;
         int get_sign() const;
         int get_grade() const;
 
         void beSigned(Bureaucrat &buro);
         void get_exec_grade(Bureaucrat &buro);
+        void beExecuted(Bureaucrat &buro);
+
 
         virtual void executeAction() const = 0;
 

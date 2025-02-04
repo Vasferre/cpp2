@@ -1,5 +1,5 @@
 #include <ctime>
-#progma once
+#pragma once
 
 #include "AForm.hpp"
 
@@ -8,7 +8,7 @@ class PresidentialPardonForm : public AForm
     private:
         PresidentialPardonForm();
     public:
-        PresidentialPardonForm(string target);
+        PresidentialPardonForm(std::string target);
         PresidentialPardonForm(const PresidentialPardonForm &copy);
         ~PresidentialPardonForm();
 

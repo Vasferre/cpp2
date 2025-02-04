@@ -17,5 +17,5 @@ class Intern
         
         Intern & operator=(const Intern &assign);
 
-        AForm *makeForm(string name, string target);
+        AForm *makeForm(std::string name, std::string target);
 };

@@ -1,5 +1,5 @@
 #include <ctime>
-#progma once
+#pragma once
 
 #include "AForm.hpp"
 
@@ -8,7 +8,7 @@ class ShrubberyCreationForm : public AForm
     private:
         ShrubberyCreationForm();
     public:
-        ShrubberyCreationForm(string target);
+        ShrubberyCreationForm(std::string target);
         ShrubberyCreationForm(const ShrubberyCreationForm &copy);
         ~ShrubberyCreationForm();
 

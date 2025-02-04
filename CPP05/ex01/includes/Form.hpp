@@ -9,22 +9,22 @@
 class Form
 {
     private:
-        const string name;
+        std::string name;
         bool is_signed;
         int grade;
         int exec_grade;
     public:
         Form();
         Form(const Form &copy);
-        Form(string name, int grade, int exec_grade);
+        Form(std::string name, int grade, int exec_grade);
         ~Form();
 
         Form & operator=(const Form &assign);
 
-        string get_name() const;
-        bool get_is_signed();
-        int get_sign();
-        int get_grade();
+        std::string get_name() const;
+        bool get_is_signed() const;
+        int get_sign() const;
+        int get_grade() const;
 
         void beSigned(Bureaucrat &buro);
 

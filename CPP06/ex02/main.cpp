@@ -8,7 +8,7 @@ Base *generate(void)
 	srand(time(NULL));
 	char c = "ABC"[rand() % 3];
 
-	cout << "Type " << c << " created!" << endl;
+	std::cout << "Type " << c << " created!" << std::endl;
 	switch (c)
 	{
 	case 'A':
@@ -24,13 +24,13 @@ Base *generate(void)
 void identify(Base *p)
 {
 	if (dynamic_cast<A *>(p))
-		cout << "Pointer is type A." << endl;
+		std::cout << "Pointer is type A." << std::endl;
 	else if (dynamic_cast<B *>(p))
-		cout << "Pointer is type B." << endl;
+		std::cout << "Pointer is type B." << std::endl;
 	else if (dynamic_cast<C *>(p))
-		cout << "Pointer is type C." << endl;
+		std::cout << "Pointer is type C." << std::endl;
 	else
-		cout << "Cannot identify pointer type." << endl;
+		std::cout << "Cannot identify pointer type." << std::endl;
 }
 
 void identify(Base &p)
@@ -39,7 +39,7 @@ void identify(Base &p)
 	{
 		A &a = dynamic_cast<A &>(p);
 		(void)a;
-		cout << "Reference is type A." << endl;
+		std::cout << "Reference is type A." << std::endl;
 	}
 	catch (std::exception &exception)
 	{
@@ -47,7 +47,7 @@ void identify(Base &p)
 		{
 			B &b = dynamic_cast<B &>(p);
 			(void)b;
-			cout << "Reference is type B." << endl;
+			std::cout << "Reference is type B." << std::endl;
 		}
 		catch (std::exception &exception)
 		{
@@ -56,12 +56,12 @@ void identify(Base &p)
 
 				C &c = dynamic_cast<C &>(p);
 				(void)c;
-				cout << "Reference is type C." << endl;
+				std::cout << "Reference is type C." << std::endl;
 			}
 			catch (std::exception &exception)
 			{
 
-				cout << "Cannot identify pointer type." << endl;
+				std::cout << "Cannot identify pointer type." << std::endl;
 			}
 		}
 	}

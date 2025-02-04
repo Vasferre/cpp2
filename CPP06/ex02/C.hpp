@@ -8,4 +8,4 @@ class C : public Base
 
 };
 
-#endif;
+#endif
