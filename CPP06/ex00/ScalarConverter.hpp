@@ -16,7 +16,7 @@ class ScalarConverter
             ScalarConverter();
             ScalarConverter(const ScalarConverter &copy);
 
-            ~ScalarCoverter();
+            ~ScalarConverter();
 
             ScalarConverter & operator=(const ScalarConverter &assign);
 

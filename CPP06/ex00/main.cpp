@@ -4,7 +4,7 @@ int main(int argc, char const *argv[])
 {
 	if (argc != 2)
 	{
-		cout << "./convert <parameter>" << endl;
+		std::cout << "./convert <parameter>" << std::endl;
 		return 1;
 	}
 
