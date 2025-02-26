@@ -16,7 +16,7 @@ class Bureaucrat
         void inc();
 	void dec();
 	void signForm(AForm &form);
-	void executeForm(AForm &form);
+	void executeForm(AForm const &form);
 
         Bureaucrat();
         Bureaucrat(const Bureaucrat &copy);

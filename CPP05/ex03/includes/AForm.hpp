@@ -21,7 +21,7 @@ class AForm
     public:
         AForm();
         AForm(const AForm &copy);
-        AForm(std::string name, std::string targer, int grade, int exec_grade);
+        AForm(std::string name, std::string target, int grade, int exec_grade);
         virtual ~AForm();
 
         AForm & operator=(const AForm &assign);

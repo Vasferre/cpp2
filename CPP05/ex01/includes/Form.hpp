@@ -11,8 +11,8 @@ class Form
     private:
         std::string name;
         bool is_signed;
-        int grade;
-        int exec_grade;
+        const int grade;
+        const int exec_grade;
     public:
         Form();
         Form(const Form &copy);
