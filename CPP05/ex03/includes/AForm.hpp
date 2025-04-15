@@ -34,7 +34,7 @@ class AForm
 
         void beSigned(Bureaucrat &buro);
         void get_grade(Bureaucrat &buro);
-        void beExecuted(Bureaucrat &buro);
+        void execute(Bureaucrat &buro);
 
         virtual void executeAction() const = 0;
 

@@ -1,18 +1,18 @@
-#include <ctime>
 #pragma once
 
 #include "AForm.hpp"
 
-class ShrubberyCreationForm : public AForm
+class ShrubberyCreationForm : public AForm 
 {
-    private:
-        ShrubberyCreationForm();
-    public:
-        ShrubberyCreationForm(std::string target);
-        ShrubberyCreationForm(const ShrubberyCreationForm &copy);
-        ~ShrubberyCreationForm();
+	private:
+		ShrubberyCreationForm();
 
-        ShrubberyCreationForm & operator=(const ShrubberyCreationForm &assign);
+	public:
+		ShrubberyCreationForm(std::string _target);
+		ShrubberyCreationForm(const ShrubberyCreationForm &copy);
+		~ShrubberyCreationForm();
 
-        void executeAction() const;
+		ShrubberyCreationForm & operator=(const ShrubberyCreationForm &assign);
+
+		void executeAction() const;
 };

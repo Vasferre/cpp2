@@ -1,13 +1,27 @@
 #include "easyfind.hpp"
+#include <vector>
+#include <list>
 
-int main() {
-    int vec;
-    std::index<int> vec = {1, 2, 3, 4, 5};
-    int found = easyfind(vec, 3);
-    std::cout << "Found: " << found << std::endl; // Output: Found: 3
+int main(void)
+{
 
-    int notFound = easyfind(vec, 10);
-    std::cout << "Not Found: " << notFound << std::endl; // Output: Not Found: -1
 
-    return 0;
+	std::vector<int> intVector;
+	std::list<int> intList;
+
+	for (int i = 0; i <= 40; i++) {
+		intVector.push_back(i);
+		intList.push_back(i);
+	}
+	std::cout << "Vector:" << std::endl;
+    std::cout << "[0...40] -> 12: " << easyfind(intVector, 12) << std::endl;
+    std::cout << "[0...40] -> 40: " << easyfind(intVector, 40) << std::endl;
+	std::cout << "[0...40] -> 50: " << easyfind(intVector, 50) << std::endl;
+
+	std::cout << "List: " << std::endl;
+    std::cout << "[0...40] -> 12: " << easyfind(intList, 12) << std::endl;
+    std::cout << "[0...40] -> 40: " << easyfind(intList, 40) << std::endl;
+	std::cout << "[0...40] -> 50: " << easyfind(intList, 50) << std::endl;
+
+	return 0;
 }

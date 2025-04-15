@@ -2,30 +2,30 @@
 
 int main()
 {
-	Bureaucrat andre("Andre", 15);
-	std::cout << andre << std::endl;
+	Bureaucrat Vasco("Vasco", 15);
+	std::cout << Vasco << std::endl;
 
 	std::cout << std::endl;
-	Bureaucrat xavier("Xavier", 151);
-	Bureaucrat xavier2("Xavier2", 0);
+	Bureaucrat juninho("juninho", 151);
+	Bureaucrat juninho2("juninho2", 0);
 
 	std::cout << std::endl;
-	Bureaucrat carlos("Carlos", 3);
-	Bureaucrat lituanio("Lituanio", 149);
-	std::cout << carlos << std::endl
-		 << lituanio << std::endl;
-	carlos.inc();
-	lituanio.dec();
-	std::cout << carlos << std::endl
-		 << lituanio << std::endl;
-	carlos.inc();
-	lituanio.dec();
-	std::cout << carlos << std::endl
-		 << lituanio << std::endl;
-	carlos.inc();
-	lituanio.dec();
-	std::cout << carlos << std::endl
-		 << lituanio << std::endl;
+	Bureaucrat Pedro("pedro", 3);
+	Bureaucrat rui("rui", 149);
+	std::cout << Pedro << std::endl
+		 << rui << std::endl;
+	Pedro.inc();
+	rui.dec();
+	std::cout << Pedro << std::endl
+		 << rui << std::endl;
+	Pedro.inc();
+	rui.dec();
+	std::cout << Pedro << std::endl
+		 << rui << std::endl;
+	Pedro.inc();
+	rui.dec();
+	std::cout << Pedro << std::endl
+		 << rui << std::endl;
 
 	std::cout << std::endl;
 

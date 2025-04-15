@@ -78,7 +78,7 @@ void AForm::beSigned(Bureaucrat &buro)
     }
 }
 
-void AForm::beExecuted(Bureaucrat &buro)
+void AForm::execute(Bureaucrat &buro)
 {
     if (!is_signed)
         throw (AForm::NotSigned());

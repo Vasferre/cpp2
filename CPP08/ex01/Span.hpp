@@ -1,4 +1,4 @@
-#progma once
+#pragma once
 
 #include <vector>
 #include <iostream>
@@ -12,7 +12,7 @@ class Span
         unsigned int n;
         std::vector<int> *vector;
     public:
-        Span(unsigend int n = 0);
+        Span(unsigned int n = 0);
         ~Span();
         Span(Span const & src);
         Span & operator=(Span const & rhs);

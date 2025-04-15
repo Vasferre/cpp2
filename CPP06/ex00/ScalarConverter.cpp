@@ -2,18 +2,18 @@
 
 ScalarConverter::ScalarConverter()
 {
-	std::cout << "\e[0;33mDefault Constructor called of ScalarConverter\e[0m" << std::endl;
+	std::cout << "Default Constructor called of ScalarConverter" << std::endl;
 }
 
 ScalarConverter::ScalarConverter(const ScalarConverter &copy)
 {
 	*this = copy;
-	std::cout << "\e[0;33mCopy Constructor called of ScalarConverter\e[0m" << std::endl;
+	std::cout << "Copy Constructor called of ScalarConverter" << std::endl;
 }
 
 ScalarConverter::~ScalarConverter()
 {
-	std::cout << "\e[0;31mDestructor called of ScalarConverter\e[0m" << std::endl;
+	std::cout << "Destructor called of ScalarConverter" << std::endl;
 }
 
 ScalarConverter & ScalarConverter::operator=(const ScalarConverter &assign)
@@ -52,7 +52,6 @@ void print(float convert){
 	if (end_in_zero)
 		std::cout << ".0";
 	std::cout << std::endl;
-
 }
 
 void print(double convert){

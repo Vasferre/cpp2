@@ -3,7 +3,7 @@
 
 int main()
 {
-	Bureaucrat andre("Andre", 15);
+	Bureaucrat Vasco("Vasco", 15);
 	std::cout << std::endl;
 
 	Form lowSign("Sign to low", -1, 1);
@@ -13,11 +13,11 @@ int main()
 	std::cout << std::endl;
 
 	Form buroToLow("Buro to low", 12, 1);
-	andre.signForm(buroToLow);
+	Vasco.signForm(buroToLow);
 	std::cout << std::endl;
 
 	Form signebleForm("Buro can sign this one!", 17, 1);
-	andre.signForm(signebleForm);
+	Vasco.signForm(signebleForm);
 
 	std::cout << std::endl;
 
