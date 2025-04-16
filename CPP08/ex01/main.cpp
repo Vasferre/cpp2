@@ -20,13 +20,13 @@ int main(void)
 	}
 	
 	std::cout << sp.shortestSpan() << std::endl;
-	std::cout << sp.LongestSpan() << std::endl << std::endl;
+	std::cout << sp.longestSpan() << std::endl << std::endl;
 
 	Span sp2 = Span(10000);
 	sp2.seed(10000);
 
 	std::cout << sp2.shortestSpan() << std::endl;
-	std::cout << sp2.LongestSpan() << std::endl;
+	std::cout << sp2.longestSpan() << std::endl;
 
 	return 0;
 }

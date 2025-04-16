@@ -6,38 +6,42 @@
 #include <iterator>
 #include <numeric>
 
-class Span 
-{
-    private:
-        unsigned int n;
-        std::vector<int> *vector;
-    public:
-        Span(unsigned int n = 0);
-        ~Span();
-        Span(Span const & src);
-        Span & operator=(Span const & rhs);
+using std::cout;
+using std::endl;
 
-        void    addNumber(int);
-        unsigned int    shortestSpan();
-        unsigned int    LongestSpan();
+class Span {
 
-        void    seed(unsigned int);
-        
-        class LimitReached: public std::exception
-        {
-        public:
-            virtual const char *what() const throw()
-            {
-                return "Limit reached";
-            }
-        };
+private:
+	unsigned int	_n;
+	std::vector<int> *vector;
 
-        class NoSpanToBeFound: public std::exception
-        {
-            public:
-                virtual const char *what() const throw()
-                {
-                    return "No span can be found";
-                }
-        };
+public:
+	Span(unsigned int n = 0);
+	~Span();
+	Span(Span const & src);
+	Span & operator=(Span const & rhs);
+
+	void 			addNumber(int);
+	unsigned int 	shortestSpan();
+	unsigned int 	longestSpan();
+
+	void			seed(unsigned int);
+
+	class LimitReached: public std::exception
+	{
+	public:
+		virtual const char* what() const throw()
+		{
+			return "Limit reached";
+		}
+	};
+
+	class NoSpanToBeFound: public std::exception
+	{
+	public:
+		virtual const char* what() const throw()
+		{
+			return "No span can be found";
+		}
+	};
 };
