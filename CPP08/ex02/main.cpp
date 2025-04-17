@@ -6,10 +6,10 @@ void stack()
 
 	mstack.push(5);
 	mstack.push(17);
-	cout << mstack.top() << endl;
+	std::cout << mstack.top() << std::endl;
 
 	mstack.pop();
-	cout << mstack.size() << endl;
+	std::cout << mstack.size() << std::endl;
 
 	mstack.push(3);
 	mstack.push(5);
@@ -23,7 +23,7 @@ void stack()
 
 	while (it != ite)
 	{
-		cout << *it << endl;
+		std::cout << *it << std::endl;
 		++it;
 	}
 	std::stack<int> s(mstack);
@@ -35,10 +35,10 @@ void list()
 
 	list.push_back(5);
 	list.push_back(17);
-	cout << list.back() << endl;
+	std::cout << list.back() << std::endl;
 
 	list.pop_back();
-	cout << list.size() << endl;
+	std::cout << list.size() << std::endl;
 
 	list.push_back(3);
 	list.push_back(5);
@@ -52,7 +52,7 @@ void list()
 
 	while (it != ite)
 	{
-		cout << *it << endl;
+		std::cout << *it << std::endl;
 		++it;
 	}
 	std::list<int> s(list);
@@ -61,6 +61,6 @@ void list()
 int main()
 {
 	stack();
-	cout << endl << "Same code but with list" << endl << endl;
+	std::cout << std::endl << "Same code but with list" << std::endl << std::endl;
 	list();
 }

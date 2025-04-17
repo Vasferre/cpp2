@@ -7,9 +7,6 @@
 #include <iterator>
 #include <list>
 
-using std::cout;
-using std::endl;
-
 template <typename T>
 class MutantStack : public std::stack<T>
 {
@@ -41,4 +38,4 @@ class MutantStack : public std::stack<T>
 		}
 
 		iterator end() { return (&this->top() + 1); }
-};
+};      

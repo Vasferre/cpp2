@@ -6,9 +6,6 @@
 #include <iterator>
 #include <numeric>
 
-using std::cout;
-using std::endl;
-
 class Span {
 
 private:

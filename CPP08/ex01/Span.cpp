@@ -10,13 +10,13 @@ Span::~Span() {
 
 //copy constructor
 Span::Span(const Span &src){
-	cout << "Copy constructor is called." << endl;
+	std::cout << "Copy constructor is called." << std::endl;
 	*this = src;
 }
 
 //da delete da data e faz uma deep copy
 Span &Span::operator=(const Span &other) {
-	cout << "Assignation operator is called." << endl;
+	std::cout << "Assignation operator is called." << std::endl;
 
 	if (this == &other) return *this;
 
