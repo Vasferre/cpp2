@@ -4,6 +4,7 @@
 #include <algorithm>
 
 //procura por containers usando o std::find para procurar
+// stl = find
 template <typename T>
 int easyfind(T const &container, int cd)
 {
