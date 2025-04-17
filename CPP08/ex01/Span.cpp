@@ -1,11 +1,14 @@
 #include "Span.hpp"
 
+
+//aloca um array de _n atraves do new
 Span::Span(unsigned int n) : _n(n), vector(new std::vector<int>[_n]()){}
 
 Span::~Span() {
 	delete [] vector;
 }
 
+//copy constructor
 Span::Span(const Span &src){
 	cout << "Copy constructor is called." << endl;
 	*this = src;
