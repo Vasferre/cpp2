@@ -2,6 +2,8 @@
 #include <vector>
 #include <list>
 
+
+//inicia os containers e percorre
 int main(void)
 {
 
