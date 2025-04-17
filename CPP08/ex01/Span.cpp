@@ -14,6 +14,7 @@ Span::Span(const Span &src){
 	*this = src;
 }
 
+//da delete da data e faz uma deep copy
 Span &Span::operator=(const Span &other) {
 	cout << "Assignation operator is called." << endl;
 
@@ -29,6 +30,8 @@ Span &Span::operator=(const Span &other) {
 	return *this;
 }
 
+//verifica se span esta full
+//adiciona um numero ao container pndo o na ultima posicao
 void Span::addNumber(int number) {
 	if (_n == 0)
 		throw (LimitReached());
@@ -37,6 +40,9 @@ void Span::addNumber(int number) {
 	_n -= 1;
 }
 
+//verifica se tem elementos suficientes
+//cria um vetor novo
+//procura a diferemca maxima
 unsigned int Span::longestSpan() {
 	if (vector->size() <= 1)
 		throw (NoSpanToBeFound());
@@ -51,6 +57,9 @@ unsigned int Span::longestSpan() {
 	return (*std::max_element(newVector.begin() + 1, newVector.end()));
 }
 
+//verifica os elementos
+//cria um vetor novo
+//procura a diferenca maxima
 unsigned int Span::shortestSpan() {
 	if (vector->size() <= 1)
 		throw (NoSpanToBeFound());
@@ -65,6 +74,9 @@ unsigned int Span::shortestSpan() {
 	return (*std::min_element(newVector.begin() + 1, newVector.end()));
 }
 
+//numero random em tempo real
+//insere n de numeros no vetor
+//da update na capacidade 
 void Span::seed(unsigned int n) {
 
 	if (n > _n || _n == 0)
